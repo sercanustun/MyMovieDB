@@ -21,7 +21,7 @@ public class ServerTsv {
 		
 		try (ServerSocket serverSocket = new ServerSocket(5555)) {
 			
-			System.out.println("Server almaya hazır");
+			System.out.println("Server başlatıldı-Client bekleniyor ...");
 			
 			Socket socket = serverSocket.accept();
 			System.out.println("Bağlantı: " + socket);
@@ -46,7 +46,7 @@ public class ServerTsv {
 					out.writeObject(result);
 					// Client e artist arıyorsak gelen sorguyu MoviesArthistTsvDetail cast edicez
 				}
-				System.out.println("Cevab gönderildi");
+				System.out.println("Cevap gönderildi");
 			}
 			
 		} catch (IOException e) {
